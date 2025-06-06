@@ -56,15 +56,16 @@ table {
 html {
     font-family: "Tomorrow", sans-serif;
     color: white;
+    min-height: 100dvh;
 }
 
 body {
     background-color: black;
+    min-height: 100dvh;
 }
 
 header {
-    margin: 0 0.5em;
-    padding: 1.1em 0.5em;
+    padding: 1.1em 1em;
     height: 4.5em;
     border-image: linear-gradient(to right, #000 0%, #02c39a 50%, #000 100%) 1;
     border-width: 0 0 1px;
@@ -154,7 +155,7 @@ section {
 }
 
 #gopher {
-    margin: 1rem 1rem -0.5rem;
+    margin: 1rem 1rem -0.6rem;
     height: 5em;
     align-self: flex-start;
 }
@@ -190,4 +191,56 @@ footer nav a {
 a {
     color: white;
     text-decoration: none;
+}
+
+.title-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 600px) {
+    body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    header, footer {
+        max-width: 1000px;
+        width: 100%;
+    }
+
+    #gopher {
+        margin: 1rem 1rem 0;
+    }
+
+    main {
+        max-width: 1000px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1em;
+    }
+
+    section {
+        margin: 0;
+    }
+
+    main > section, main > div {
+        flex: 1 1 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .title-header {
+        flex-basis: 100%;
+    }
+
+    h2 {
+        text-wrap-mode: nowrap;
+    }
+
 }
