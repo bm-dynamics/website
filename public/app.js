@@ -15,7 +15,7 @@
     connected = false
     for (let j = i + 1; j < nodes.length; j++) {
         if (connected) {
-            if (Math.random() > 0.4) continue;
+            if (Math.random() > 0.3) continue;
         }
       connected = true
       edges.push({ from: i, to: j, t: Math.random() });
