@@ -212,6 +212,12 @@ a {
         width: 100%;
     }
 
+    #insanios {
+        align-self: center;
+        width: 3rem 0;
+        width: 80%;
+    }
+
     #gopher {
         margin: 1rem 1rem 0;
     }
